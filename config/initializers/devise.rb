@@ -9,7 +9,7 @@ Devise.setup do |config|
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '821f5d4982f4ee6ad0e1f07bfcfa13f646f41bd62490a70b762793704572cf59738d1362077eb8d55e2718792dc4ee3be113a8f29b3769a03c716c8b39668a5b'
-  
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -183,7 +183,7 @@ Devise.setup do |config|
 
   # Defines which key will be used when locking and unlocking an account
   # config.unlock_keys = [:email]
-
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Defines which strategy will be used to unlock an account.
   # :email = Sends an unlock link to the user email
   # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
