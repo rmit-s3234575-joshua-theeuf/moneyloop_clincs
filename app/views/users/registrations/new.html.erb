@@ -2,7 +2,12 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+  <div class="controls">
+    <%= f.fields_for :patients do |patient_form| %>
+      <%= patient_form.text_field :firstName  %>
+      <%= render partial: "devise/shared/field_error", locals: { model: resource.patient, field: :firstName } %>
+    <% end %>
+  </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
